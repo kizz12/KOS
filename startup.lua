@@ -62,9 +62,9 @@ os.pullEvent = os.pullEventRaw
 			term.setTextColor(colors.blue)
 			print'Commands: '
 			term.setTextColor(colors.white)
-			print'Logout - Logs user out. '
-			print'Extend - Extends logout timer by x min.'
-			print'Help - Shows more commands'
+			print'logout - Logs user out. '
+			print'extend - Extends logout timer by x min.'
+			print'help - Shows more commands'
 			user=0
 			end
 			if f1Search==nil and f2Search~=nil then
@@ -79,9 +79,9 @@ os.pullEvent = os.pullEventRaw
 			term.setTextColor(colors.blue)
 			print'Commands: '
 			term.setTextColor(colors.white)
-			print'Logout - Logs user out. '
-			print'Extend - Extends logout timer by x min.'
-			print'Help - Shows more commands'
+			print'logout - Logs user out. '
+			print'extend - Extends logout timer by x min.'
+			print'help - Shows more commands'
 			user=1
 			end
 			end
@@ -95,8 +95,8 @@ end
 	
 	
 	function logme()
-		if user==1 then userName="Kizz" end
-		if user==0 then userName="Guest" end
+		userName=usern
+		
 		
 		if not fs.exists("log") then
 		local h = fs.open("log", "a")
