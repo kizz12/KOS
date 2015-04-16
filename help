@@ -1,6 +1,6 @@
 print'Commands:'
 print'Logout - Logs user out. '
-print'Extend - Extends logout timer by 5 min.'
+print'Extend - Extends logout timer by x min.'
 print'Help - Shows more commands'
 if user==1 then
 print'Door - Opens interior security doors.'
