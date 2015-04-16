@@ -51,3 +51,17 @@ Kizz - Day: 34 | Time: 2.823.
 Kizz - Day: 34 | Time: 5.527. 
 Kizz - Day: 35 | Time: 3.83. 
 Guest - Day: 39 | Time: 15.389. 
+Guest - Day: 40 | Time: 2.849. 
+Kizz - Day: 43 | Time: 10.711. 
+Kizz - Day: 43 | Time: 11.673. 
+Kizz - Day: 43 | Time: 15.219. 
+Kizz - Day: 44 | Time: 7.629. 
+Kizz - Day: 44 | Time: 10.771. 
+Kizz - Day: 44 | Time: 16.915. 
+Kizz - Day: 45 | Time: 0.357. 
+Kizz - Day: 47 | Time: 0.301. 
+Kizz - Day: 47 | Time: 2.24. 
+Kizz - Day: 47 | Time: 2.667. 
+Guest - Day: 47 | Time: 3.316. 
+Kizz - Day: 47 | Time: 7.93. 
+Kizz - Day: 47 | Time: 10.714. 

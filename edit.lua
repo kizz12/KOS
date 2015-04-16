@@ -12,7 +12,7 @@ if fs.exists( sPath ) and fs.isDir( sPath ) then
 	print( "Cannot edit a directory." )
 	return
 end
-if sPath=="startup" or sPath=="master" or sPath=="guest" or sPath=="door" or sPath=="edit" or sPath=="extend" or sPath=="help" or sPath=="log" or sPath=="logout" then
+if sPath=="startup" or sPath=="users" or sPath=="newuser" or sPath=="master" or sPath=="guest" or sPath=="door" or sPath=="edit" or sPath=="extend" or sPath=="help" or sPath=="log" or sPath=="logout" then
 print'Cannot edit this file!'
 return
 end
