@@ -201,6 +201,11 @@ if user==1 then
 	uncrt=read()
 	print('Please enter the desired password for '..uncrt..".")
 	unpass=read()
+	if uncrt==nil or uncrt=='' or uncrt=='.' or unpass==nil or unpass=='' or unpass=='.' then
+	print'Invalid username or password!'
+	sleep(1)
+	return
+	end	
 	local stringToHash = unpass
 	passHash = sha256(stringToHash)
 	
@@ -243,6 +248,11 @@ if user==3 then
 	uncrt=read()
 	print('Please enter the desired password for '..uncrt..".")
 	unpass=read()
+	if uncrt==nil or uncrt=='' or uncrt=='.' or unpass==nil or unpass=='' or unpass=='.' then
+	print'Invalid username or password!'
+	sleep(1)
+	os.reboot()
+	end
 	local stringToHash = unpass
 	passHash = sha256(stringToHash)
 	local acclvl=-1

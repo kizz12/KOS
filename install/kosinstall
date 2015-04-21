@@ -41,7 +41,7 @@ print'Creating master'
 shell.run("pastebin","get","13PH5gCe","master" )
 
 print'Creating newuser'
-shell.run("pastebin","get","NneHthPJ","newuser" )
+shell.run("pastebin","get","1XxLRmJS","newuser" )
 
 print'Creating startup'
 shell.run("pastebin","get","6Qfs7sNq","startup" )

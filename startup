@@ -212,6 +212,7 @@ end
 	end
 	print'Enter User:'
 	usern=read()
+	
 	print'Enter Password:'
 	pass=read("*")
 	local stringToHash = pass
@@ -224,7 +225,11 @@ end
 		term.setCursorPos(1,1)
 		
 		
-		
+	if usern==nil or usern=='' or usern=='.' or pass==nil or pass=='' or pass=='.' then
+	print'Invalid username or password!'
+	sleep(1)
+	os.reboot()
+	end	
 		
 
 	if fs.exists("users") then
