@@ -625,4 +625,3 @@ end
 term.clear()
 term.setCursorBlink( false )
 term.setCursorPos( 1, 1 )
-
