@@ -201,7 +201,7 @@ end
 	term.clear()
 	term.setCursorPos(1,1)
 	term.setTextColor(colors.orange)
-	print'KOS 1.1'
+	print'KOS 1.4.2'
 	term.setTextColor(colors.white)
 	if not fs.exists("users") then
 		print'No users!'
