@@ -1,0 +1,62 @@
+print'Welcome to the KOS Installer!'
+
+print'Warning, this will delete any startup file, and create multiple files. Are you sure you wish to continue? Y to continue. N to cancel'
+continue=read()
+if continue=="y" or continue=="Y" then
+print'Beginning install...'
+
+fileList=fs.list("")
+
+for _, file in ipairs(fileList) do 
+if file=="edit" then fs.delete("edit") print'Deleted edit' end
+if file=="extend" then fs.delete("extend") print'Deleted extended' end
+if file=="guest" then fs.delete("guest") print'Deleted guest' end
+if file=="help" then fs.delete("help") print'Deleted help' end
+if file=="logout" then fs.delete("logout") print'Deleted logout' end
+if file=="master" then fs.delete("master") print'Deleted master' end
+if file=="newuser" then fs.delete("newuser") print'Deleted newuser' end
+if file=="startup" then fs.delete("startup") print'Deleted startup' end
+if file=="users" then fs.delete("users") print'Deleted users' end
+if file=="log" then fs.delete("log") print'Deleted log' end
+end --End the loop
+
+
+print'Creating edit'
+shell.run("pastebin","get","htuxh4wM","edit" )
+
+print'Creating extend'
+shell.run("pastebin","get","cYH7ydus","extend" )
+
+print'Creating guest'
+shell.run("pastebin","get","GQ7jhzEP","guest" )
+
+print'Creating help'
+shell.run("pastebin","get","Jzf6JS8z","help" )
+
+print'Creating logout'
+shell.run("pastebin","get","0axZTkq1","logout" )
+
+print'Creating master'
+shell.run("pastebin","get","nihumgLf","master" )
+
+print'Creating newuser'
+shell.run("pastebin","get","gwdVHGt3","newuser" )
+
+print'Creating startup'
+shell.run("pastebin","get","DdEb2qQC","startup" )
+
+local timer=5
+
+while timer~=0 do
+print("Rebooting in "..timer )
+sleep(1)
+timer=timer-1
+end
+os.reboot()
+end
+
+
+
+if continue~="y" and continue~="Y" then
+print'Cancelling install!'
+end

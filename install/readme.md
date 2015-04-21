@@ -1,0 +1,1 @@
+Simply run this installer and it will install the OS. Make sure to backup any previous programs before installing!
