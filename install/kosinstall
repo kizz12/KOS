@@ -18,11 +18,12 @@ if file=="newuser" then fs.delete("newuser") print'Deleted newuser' end
 if file=="startup" then fs.delete("startup") print'Deleted startup' end
 if file=="users" then fs.delete("users") print'Deleted users' end
 if file=="log" then fs.delete("log") print'Deleted log' end
+if file=="delete" then fs.delete("delete") print'Deleted delete' end
 end --End the loop
 
 
 print'Creating edit'
-shell.run("pastebin","get","htuxh4wM","edit" )
+shell.run("pastebin","get","jEpijeNB","edit" )
 
 print'Creating extend'
 shell.run("pastebin","get","cYH7ydus","extend" )
@@ -44,6 +45,16 @@ shell.run("pastebin","get","NneHthPJ","newuser" )
 
 print'Creating startup'
 shell.run("pastebin","get","6Qfs7sNq","startup" )
+
+print'Creating delete'
+shell.run("pastebin","get","4SJ478es","delete" )
+
+--print'Securing OS...'
+--sleep(.5)
+--print'Deleting rom/programs/edit'
+--fs.move("rom/programs/edit","rom/programs/edit1")
+--print'Deleting rom/programs/delete'
+--fs.move("rom/programs/delete","rom/programs/delete1")
 
 local timer=5
 
