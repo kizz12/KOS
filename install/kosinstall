@@ -29,7 +29,7 @@ print'Creating extend'
 shell.run("pastebin","get","cYH7ydus","extend" )
 
 print'Creating guest'
-shell.run("pastebin","get","GQ7jhzEP","guest" )
+shell.run("pastebin","get","RAJLtn5N","guest" )
 
 print'Creating help'
 shell.run("pastebin","get","Jzf6JS8z","help" )
@@ -38,7 +38,7 @@ print'Creating logout'
 shell.run("pastebin","get","0axZTkq1","logout" )
 
 print'Creating master'
-shell.run("pastebin","get","nihumgLf","master" )
+shell.run("pastebin","get","13PH5gCe","master" )
 
 print'Creating newuser'
 shell.run("pastebin","get","NneHthPJ","newuser" )

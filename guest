@@ -1,6 +1,24 @@
 --local osEvent=os.pullEvent
 --os.pullEvent=os.pullEventRaw
 
+function protect()
+	local oldFs = fs.open
+		print'OS Protect active!'
+		fs.open = function(path,...)
+		  if path == "rom/programs/edit" or path == "/rom/programs/edit" then 
+				print'Failed to call edit!'
+				return
+		end
+		  if path == "rom/programs/delete" or path == "/rom/programs/delete" then
+		  print'Failed to call delete!'
+				return
+		end
+		if path ~= "rom/programs/delete" or path ~= "/rom/programs/delete" or path ~= "rom/programs/edit" or path ~= "/rom/programs/edit" then
+        return oldFs(path,...)
+		end
+	end
+end
+
 os.pullEvent = function(filter)
         while true do
                 local myEvent = {os.pullEventRaw(filter)}
@@ -33,5 +51,5 @@ end
 
 
 
-parallel.waitForAll(listener,logout)
+parallel.waitForAll(listener,logout,protect)
 os.pullEvent=osEvent
