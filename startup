@@ -274,7 +274,35 @@ end
 			if f1Search==nil and f2Search~=nil then
 			access=1
 			shell.openTab("master")
+			---------------------------------------------------------
+			os.loadAPI("guiapi")
+			box = guiapi.createDialogueBox("Enable GUI?",{"Would you like","to enable GUI?"},"yn") --#Creates a dialogue box with the title "GUI API" ,two body lines: "This is a dialogue box!" and "Do you like it?" and the box type is "yn"
+			boxResult=box:draw( 20,5,5,colors.gray,colors.lightBlue,colors.white ) --#Makes a text box at (20,5) with a width of 5, a gray background color, white text color, and lightBlue title bar color.
+
+			if boxResult==true then
+				box:clear(colors.black)
+				term.clear()
+				term.setCursorPos(20,7)
+				print'KOS Loading...'
+				bar = guiapi.createBar( "KOS Loading" ) --#This creates a new bar with the name
+				bar:draw( 10,9,30,colors.white,colors.green,true,colors.black,colors.white ) --#This draws the bar at (5,8) with a length of 30. The first color is the bar color, the second color is the progress color, the next argument is whether or not to display the percent, the third color is the text background color (for displaying the percent) and the fifth is the percent text color.
+				percent=0
+				while percent<100 do
+					bar:update( percent ) --#Re-draws the bar with the new percent
+					percent=percent+5
+					sleep(.1)
+				end
+				shell.run("gui")
+			end
+			if boxResult==false then
+				box:clear(colors.black)
+				term.clear()
+				term.setCursorPos(1,1)
+			end
+			-------------------------------------
+			if boxResult==false then
 			print'KOS Loading...'
+			end
 			sleep(1)
 			term.clear()
 			term.setCursorPos(1,1)

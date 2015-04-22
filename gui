@@ -1,0 +1,77 @@
+
+--Button Functions
+
+function pgm() --programs function
+term.setCursorPos(1,1)
+term.clear()
+term.setBackgroundColor(colors.black)
+print("Coming soon!") 
+sleep(1)
+
+end
+
+function tm() --terminal function
+term.setCursorPos(1,1)
+term.clear()
+term.setBackgroundColor(colors.black)
+print("Switching to Terminal mode!")
+sleep(1)
+breakloop=true
+end
+
+function ext() --extend function
+term.setCursorPos(1,1)
+term.clear()
+term.setBackgroundColor(colors.black)
+shell.run("extend")
+
+end
+
+function lgt() --logout function
+term.setCursorPos(1,1)
+term.clear()
+term.setBackgroundColor(colors.black)
+shell.run("logout")
+
+end
+
+--API Call
+os.loadAPI("guiapi")
+breakloop=false
+while true do
+term.clear()
+term.setBackgroundColor(colors.black)
+
+--Programs Button
+
+pbutton = guiapi.createButton("Programs", pgm ) 
+pbutton:draw( 1,1,5, colors.green, colors.white )
+--pbutton:toggle( colors.red,.1)
+
+--Terminal Mode Button
+
+tmbutton = guiapi.createButton("Terminal Mode", tm ) 
+tmbutton:draw( 3,7,5, colors.green, colors.white )
+--tmbutton:toggle( colors.red,.1)
+
+--Extend Button
+
+exbutton = guiapi.createButton("Extend", ext ) 
+exbutton:draw( 12,1,5, colors.green, colors.white )
+--exbutton:toggle( colors.red,.1)
+
+--Logout Button
+
+lbutton = guiapi.createButton("Logout", lgt ) 
+lbutton:draw( 43,13,5, colors.green, colors.white )
+--lbutton:toggle( colors.red,.1)
+--nt,k,bxx,bxy = os.pullEvent("mouse_click")
+--print(nt..k..bxx..bxy)
+
+guiapi.detect(true)
+if breakloop==true then
+break
+end
+term.clear()
+term.setBackgroundColor(colors.black)
+end
