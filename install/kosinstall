@@ -19,6 +19,8 @@ if file=="startup" then fs.delete("startup") print'Deleted startup' end
 if file=="users" then fs.delete("users") print'Deleted users' end
 if file=="log" then fs.delete("log") print'Deleted log' end
 if file=="delete" then fs.delete("delete") print'Deleted delete' end
+if file=="gui" then fs.delete("gui") print'Deleted gui' end
+if file=="guiapi" then fs.delete("guiapi") print'Deleted guiapi' end
 end --End the loop
 
 
@@ -26,7 +28,7 @@ print'Creating edit'
 shell.run("pastebin","get","jEpijeNB","edit" )
 
 print'Creating extend'
-shell.run("pastebin","get","cYH7ydus","extend" )
+shell.run("pastebin","get","Dtujsd4d","extend" )
 
 print'Creating guest'
 shell.run("pastebin","get","RAJLtn5N","guest" )
@@ -49,12 +51,11 @@ shell.run("pastebin","get","6Qfs7sNq","startup" )
 print'Creating delete'
 shell.run("pastebin","get","4SJ478es","delete" )
 
---print'Securing OS...'
---sleep(.5)
---print'Deleting rom/programs/edit'
---fs.move("rom/programs/edit","rom/programs/edit1")
---print'Deleting rom/programs/delete'
---fs.move("rom/programs/delete","rom/programs/delete1")
+print'Creating gui'
+shell.run("pastebin","get","39MNtZbR","gui" )
+
+print'Creating guiapi'
+shell.run("pastebin","get","QY2RC1Uu","guiapi" )
 
 local timer=5
 
