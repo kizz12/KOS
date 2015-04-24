@@ -264,7 +264,7 @@ if user==3 then
 	passHash = sha256(stringToHash)
 	local acclvl=-1
 	while acclvl~=0 and acclvl~=1 do
-		--acclvl=1
+		acclvl=1
 		if acclvl<0 or acclvl>1 then
 		print'Must be 0 or 1!'
 		end
