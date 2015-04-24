@@ -21,6 +21,7 @@ if file=="log" then fs.delete("log") print'Deleted log' end
 if file=="delete" then fs.delete("delete") print'Deleted delete' end
 if file=="gui" then fs.delete("gui") print'Deleted gui' end
 if file=="guiapi" then fs.delete("guiapi") print'Deleted guiapi' end
+if file=="touchpoint" then fs.delete("touchpoint") print'Deleted touchpoint API' end
 end --End the loop
 
 
@@ -34,7 +35,7 @@ print'Creating guest'
 shell.run("pastebin","get","RAJLtn5N","guest" )
 
 print'Creating help'
-shell.run("pastebin","get","Jzf6JS8z","help" )
+shell.run("pastebin","get","hBJipbvg","help" )
 
 print'Creating logout'
 shell.run("pastebin","get","0axZTkq1","logout" )
@@ -56,6 +57,9 @@ shell.run("pastebin","get","39MNtZbR","gui" )
 
 print'Creating guiapi'
 shell.run("pastebin","get","QY2RC1Uu","guiapi" )
+
+print'Creating touchpoint'
+shell.run("pastebin","get","Sczni8A5","touchpoint" )
 
 local timer=5
 

@@ -1,5 +1,8 @@
-print'How many minutes would you like to add?'
+term.clear()
+term.setCursorPos(1,1)
+term.setBackgroundColor(colors.black)
 
+print'How many minutes would you like to add?'
 mint=read()
 mint=tonumber(mint)
 getType=type(mint)
@@ -16,3 +19,4 @@ end
 if getType=="nil" or getType=="string" then
 print'Numbers only please!'
 end
+sleep(1)

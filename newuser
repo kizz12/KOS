@@ -197,10 +197,16 @@ print"Sorry, you aren't allowed to create users!"
 end
 if user==1 then
 	print'Welcome to the user creator!'
-	print'Please enter the desired username:'
+	print'Please enter the desired username, or exit to exit:'
 	uncrt=read()
+	if uncrt=="exit" then
+	return
+	end
 	print('Please enter the desired password for '..uncrt..".")
 	unpass=read()
+	if unpass=="exit" then
+	return
+	end
 	if uncrt==nil or uncrt=='' or uncrt=='.' or unpass==nil or unpass=='' or unpass=='.' then
 	print'Invalid username or password!'
 	sleep(1)
@@ -241,6 +247,7 @@ if user==1 then
 		end
 	end
 		print('User: '..uncrt..' has been created with access level '..acclvl..'.')
+		sleep(2)
 end
 if user==3 then
 	print'Welcome to the user creator!'
@@ -257,7 +264,7 @@ if user==3 then
 	passHash = sha256(stringToHash)
 	local acclvl=-1
 	while acclvl~=0 and acclvl~=1 do
-		acclvl=1
+		--acclvl=1
 		if acclvl<0 or acclvl>1 then
 		print'Must be 0 or 1!'
 		end

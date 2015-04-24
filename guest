@@ -20,12 +20,6 @@ function protect()
 	end
 end
 
-os.pullEvent = function(filter)
-        while true do
-                local myEvent = {os.pullEventRaw(filter)}
-                if myEvent[1] ~= "terminate" then return unpack(myEvent) end
-        end
-end
 
 function logout()
 	timetor=300
@@ -42,8 +36,8 @@ end
 
 function listener()
 	while true do		
-		event,timer = os.pullEvent("extendme")
-		if event == "extendme" and timer > 0 then
+		eventExtend,timer = os.pullEvent("extendme")
+		if eventExtend == "extendme" and timer > 0 then
 			print("Extending time!")
 			timetor=timetor+timer
 		end

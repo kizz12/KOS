@@ -25,11 +25,12 @@ buttonList = {}
 Buttons = {}
 Buttons.__index = Buttons
  
-function createButton( name, func )
+function createButton( name, func)
         button = {}
         setmetatable(button,Buttons)
         button.name = name
         button.action = func
+		
         return button
 end
  
@@ -45,7 +46,6 @@ end
  
  
 function Buttons:draw( x,y,width,color,tcolor )
- 
         table.insert(buttonList,{self.name,x,y,width,self.action})
        
         self.x = x
@@ -55,7 +55,7 @@ function Buttons:draw( x,y,width,color,tcolor )
                 self.color = color
         end
         self.tcolor = tcolor
- 
+		self.VarName=vName
         for i = 1,width do
                 paintutils.drawLine(x, y + i, x + #self.name + 1, y + i, color)
         end
@@ -79,7 +79,7 @@ function Buttons:remove()
         self = nil
 end
  
-function detect( trigger )
+function detect( trigger,tggl )
 bClickEvent,bclick,bx,by = os.pullEvent("mouse_click")
     for i = 1,#buttonList do
 		if bx >= buttonList[i][2] and bx <= buttonList[i][2] + #buttonList[i][1] and by >= buttonList[i][3] and by <= buttonList[i][3] + buttonList[i][4]  and bclick==1 then
